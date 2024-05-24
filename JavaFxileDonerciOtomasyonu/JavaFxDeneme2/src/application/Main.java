@@ -1,5 +1,6 @@
 package application;
 	
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -331,13 +332,24 @@ public class Main extends Application {
 				@Override
 				public void handle(Event arg0) {
 					Dao dao=new Dao();
-					int result=dao.saveItemToProductNameAndPriceTable(textfield.getText(),textfield1.getText());
+					int result=0;
+					try {
+						result = dao.saveItemToProductNameAndPriceTable(textfield.getText(),textfield1.getText());
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					System.out.println(result);
 					if(result==1) 
 					{
 						textfield.setText("");
 						textfield1.setText("");
-						listview.setItems(dao.getProductNames());
+						try {
+							listview.setItems(dao.getProductNames());
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 					
 				}
@@ -357,13 +369,24 @@ public class Main extends Application {
 				@Override
 				public void handle(Event arg0) {
 					Dao dao=new Dao();
-					int result=dao.deleteFromProductNameAndPriceTable(listview.getSelectionModel().getSelectedItem()+"");
+					int result=0;
+					try {
+						result = dao.deleteFromProductNameAndPriceTable(listview.getSelectionModel().getSelectedItem()+"");
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					
 					if(result==1) 
 					{
 						textfield.setText("");
 						textfield1.setText("");
-						listview.setItems(dao.getProductNames());
+						try {
+							listview.setItems(dao.getProductNames());
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 					
 				}
@@ -468,7 +491,12 @@ public class Main extends Application {
 							product.setProperty(product.getProperty()+"\n"+listview8
 									.getSelectionModel().getSelectedItem());
 					}
-					product.setPrice(Double.valueOf(dao.getProductPrice(product.getName())));
+					try {
+						product.setPrice(Double.valueOf(dao.getProductPrice(product.getName())));
+					} catch (NumberFormatException | SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					product.setNumber(1);
 					product.setTotal(product.getNumber()*product.getPrice());
 					product.setDate(LocalDate.now()+"");
@@ -534,7 +562,13 @@ public class Main extends Application {
 					textfield2.setText(orderTotal+"");
 					orderTotal=0;
 					//tableview.setItems(orderProducts);
-					List<Product> selledProducts=dao.bringProductTableContent();
+					List<Product> selledProducts=null;
+					try {
+						selledProducts = dao.bringProductTableContent();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					
 					if(selledProducts.size()>0)
 					{
@@ -545,9 +579,14 @@ public class Main extends Application {
 							if(selledProducts.get(i).getName().equals(product1.getName())
 							&&selledProducts.get(i).getDate().equals(product1.getDate()))
 							{
-								dao.increaseProductNumberByAlteringProductTable(selledProducts.get(i).getName() 
-									,selledProducts.get(i).getDate(),selledProducts.get(i).getNumber()
-									,selledProducts.get(i).getPrice());
+								try {
+									dao.increaseProductNumberByAlteringProductTable(selledProducts.get(i).getName() 
+										,selledProducts.get(i).getDate(),selledProducts.get(i).getNumber()
+										,selledProducts.get(i).getPrice());
+								} catch (SQLException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 //								selledProducts.get(i).setNumber(selledProducts.get(i).getNumber()+1);
 //								selledProducts.get(i).setTotal(selledProducts.get(i).getNumber()
 //										*selledProducts.get(i).getPrice());
@@ -564,20 +603,36 @@ public class Main extends Application {
 							}
 							i++;
 						}
-						if(j==selledProducts.size()) 
-							dao.addProductToProductTable(product1);
+						if(j==selledProducts.size())
+							try {
+								dao.addProductToProductTable(product1);
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 						    //selledProducts.add(product1);
 						i=0;
 						j=0;
 					}
 					else 
 					{
-						dao.addProductToProductTable(product1);
+						try {
+							dao.addProductToProductTable(product1);
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 						//selledProducts.add(product1);
 					}
 					
 					tableview1.getItems().clear();
-					List<Product> selledProducts2=dao.bringProductTableContent();
+					List<Product> selledProducts2=null;
+					try {
+						selledProducts2 = dao.bringProductTableContent();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					double selledTotal=0;
 					for(Product sep: selledProducts2)
 					{
@@ -621,7 +676,13 @@ public class Main extends Application {
 								sp.setTotal(sp.getNumber()*sp.getPrice());
 							}else
 							orderProducts.remove(sp);
-							List<Product> selledProducts4=dao.bringProductTableContent();
+							List<Product> selledProducts4=null;
+							try {
+								selledProducts4 = dao.bringProductTableContent();
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 							
 							tableview.getItems().clear();
 							tableview.getItems().addAll(orderProducts);
@@ -641,9 +702,14 @@ public class Main extends Application {
 									if(selledProducts4.get(i).getName().equals(sp.getName())
 									&&selledProducts4.get(i).getDate().equals(sp.getDate()))
 									{
-										dao.decreaseProductNumberByAlteringProductTable(selledProducts4.get(i).getName() 
-											,selledProducts4.get(i).getDate(),selledProducts4.get(i).getNumber()
-											,selledProducts4.get(i).getPrice());
+										try {
+											dao.decreaseProductNumberByAlteringProductTable(selledProducts4.get(i).getName() 
+												,selledProducts4.get(i).getDate(),selledProducts4.get(i).getNumber()
+												,selledProducts4.get(i).getPrice());
+										} catch (SQLException e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										}
 //										selledProducts.get(i).setNumber(selledProducts.get(i).getNumber()+1);
 //										selledProducts.get(i).setTotal(selledProducts.get(i).getNumber()
 //												*selledProducts.get(i).getPrice());
@@ -660,20 +726,36 @@ public class Main extends Application {
 									}
 									i++;
 								}
-								if(j==selledProducts4.size()) 
-									dao.deleteFromProductTable(sp.getName(),sp.getDate());
+								if(j==selledProducts4.size())
+									try {
+										dao.deleteFromProductTable(sp.getName(),sp.getDate());
+									} catch (SQLException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 								    //selledProducts.add(product1);
 								i=0;
 								j=0;
 							}
 							else 
 							{
-								dao.deleteFromProductTable(sp.getName(),sp.getDate());
+								try {
+									dao.deleteFromProductTable(sp.getName(),sp.getDate());
+								} catch (SQLException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 								//selledProducts.add(product1);
 							}
 							
 							tableview1.getItems().clear();
-							List<Product> selledProducts2=dao.bringProductTableContent();
+							List<Product> selledProducts2=null;
+							try {
+								selledProducts2 = dao.bringProductTableContent();
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 							double selledTotal=0;
 							for(Product sep: selledProducts2)
 							{
@@ -774,8 +856,19 @@ public class Main extends Application {
 					ButtonType result=alert.showAndWait().orElse(null);
 					if(result.equals(ButtonType.OK))
 					{
-						dao.truncateProductTable();
-						List<Product> selledProducts3=dao.bringProductTableContent();
+						try {
+							dao.truncateProductTable();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						List<Product> selledProducts3=null;
+						try {
+							selledProducts3 = dao.bringProductTableContent();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 						tableview.getItems().clear();
 						orderProducts.clear();
 						textfield4.setText("");
@@ -826,12 +919,23 @@ public class Main extends Application {
 						if(result.equals(ButtonType.OK)&&tableview1.getSelectionModel().getSelectedItem()!=null)
 						{
 							Product sp0=tableview1.getSelectionModel().getSelectedItem();
-							Product sp=dao.bringProductFromProductTable(sp0.getName(), 
-									sp0.getNumber(), sp0.getPrice(), sp0.getTotal(), sp0.getDate());
+							Product sp=null;
+							try {
+								sp = dao.bringProductFromProductTable(sp0.getName(), 
+										sp0.getNumber(), sp0.getPrice(), sp0.getTotal(), sp0.getDate());
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 							if(sp.getNumber()>1)
 							{
-								dao.decreaseProductNumberByAlteringProductTable(sp.getName(),
-										sp.getDate(), sp.getNumber(), sp.getPrice());
+								try {
+									dao.decreaseProductNumberByAlteringProductTable(sp.getName(),
+											sp.getDate(), sp.getNumber(), sp.getPrice());
+								} catch (SQLException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 								sp.setNumber(sp.getNumber()-1);
 								sp.setTotal(sp.getNumber()*sp.getPrice());
 								
@@ -839,7 +943,12 @@ public class Main extends Application {
 								
 							}else
 							{
-								dao.deleteFromProductTable(sp.getName(), sp.getDate());
+								try {
+									dao.deleteFromProductTable(sp.getName(), sp.getDate());
+								} catch (SQLException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 								
 							}
 							
@@ -861,7 +970,13 @@ public class Main extends Application {
 							orderTotal=0;
 //						
 							tableview1.getItems().clear();
-							List<Product> selledProducts2=dao.bringProductTableContent();
+							List<Product> selledProducts2=null;
+							try {
+								selledProducts2 = dao.bringProductTableContent();
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 							double selledTotal=0;
 							for(Product sep: selledProducts2)
 							{
