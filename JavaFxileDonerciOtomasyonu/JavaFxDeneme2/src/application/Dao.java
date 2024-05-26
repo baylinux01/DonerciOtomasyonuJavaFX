@@ -56,7 +56,7 @@ public class Dao {
 		
 		try {
 			Class.forName(className);
-			Connection con1 = DriverManager.getConnection(emptyUrl);
+			Connection con1 = DriverManager.getConnection(url);
 //			Connection con1 = DriverManager.getConnection(emptyUrl,uname,pass);
 			
 			PreparedStatement st1= con1.prepareStatement(query1);
