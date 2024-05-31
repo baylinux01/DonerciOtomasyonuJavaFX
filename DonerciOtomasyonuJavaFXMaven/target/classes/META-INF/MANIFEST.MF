@@ -1,24 +1,4 @@
 Manifest-Version: 1.0
 Build-Jdk-Spec: 17
-Class-Path: javafx-controls-23-ea+20.jar javafx-controls-23-ea+20-linux.
- jar javafx-graphics-23-ea+20.jar javafx-graphics-23-ea+20-linux.jar jav
- afx-base-23-ea+20.jar javafx-base-23-ea+20-linux.jar javafx-fxml-23-ea+
- 20.jar javafx-fxml-23-ea+20-linux.jar javafx-swing-23-ea+20.jar javafx-
- swing-23-ea+20-linux.jar javafx-web-23-ea+20.jar javafx-web-23-ea+20-li
- nux.jar javafx-media-23-ea+20.jar javafx-media-23-ea+20-linux.jar sqlit
- e-jdbc-3.46.0.0.jar mysql-connector-j-8.0.33.jar protobuf-java-3.21.9.j
- ar mariadb-java-client-3.4.0.jar slf4j-api-2.1.0-alpha1.jar waffle-jna-
- 3.4.0.jar jna-5.14.0.jar jna-platform-5.14.0.jar jcl-over-slf4j-2.0.13.
- jar caffeine-3.1.8.jar error_prone_annotations-2.21.1.jar checker-qual-
- 3.43.0.jar maven-shade-plugin-3.5.3.jar plexus-utils-4.0.1.jar plexus-x
- ml-3.0.0.jar asm-9.7.jar asm-commons-9.7.jar asm-tree-9.7.jar jdom2-2.0
- .6.1.jar maven-dependency-tree-3.2.1.jar aether-util-1.0.0.v20140518.ja
- r aether-api-1.0.0.v20140518.jar commons-io-2.13.0.jar jdependency-2.10
- .jar commons-collections4-4.4.jar commons-compress-1.26.1.jar commons-c
- odec-1.16.1.jar commons-lang3-3.14.0.jar maven-jar-plugin-3.4.1.jar fil
- e-management-3.1.0.jar maven-archiver-3.6.2.jar plexus-interpolation-1.
- 27.jar plexus-archiver-4.9.2.jar plexus-io-3.4.2.jar snappy-0.4.jar xz-
- 1.9.jar zstd-jni-1.5.5-11.jar javax.inject-1.jar
-Main-Class: kodcu.DonerciOtomasyonuJavaFXMaven.FakeMain
 Created-By: Maven Integration for Eclipse
 

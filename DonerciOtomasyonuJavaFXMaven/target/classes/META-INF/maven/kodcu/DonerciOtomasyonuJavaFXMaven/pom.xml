@@ -98,34 +98,36 @@
     <artifactId>waffle-jna</artifactId>
     <version>3.4.0</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-shade-plugin</artifactId>
-    <version>3.5.3</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-jar-plugin</artifactId>
-    <version>3.4.1</version>
-</dependency>
+
 
   </dependencies>
   <build>
 	<plugins>
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-jar-plugin</artifactId>
-			<version>3.4.1</version>
-			<configuration>
-				<archive>
-					<manifest>
-						<addClasspath>true</addClasspath>
-						<mainClass>kodcu.DonerciOtomasyonuJavaFXMaven.FakeMain</mainClass>
-					</manifest>
-				</archive>
-			</configuration>
+			<artifactId>maven-shade-plugin</artifactId>
+			<version>3.5.3</version>
+			<executions>
+				<execution>
+					<phase>package</phase>
+					<goals>
+						<goal>shade</goal>
+					</goals>
+					<configuration>
+						<transformers>
+							<transformer implementation=
+							"org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+								<manifestEntries>
+									<Main-Class>
+										kodcu.DonerciOtomasyonuJavaFXMaven.FakeMain
+										</Main-Class>
+										<Build-Number>1.0</Build-Number>
+								</manifestEntries>
+							</transformer>
+						</transformers>
+					</configuration>
+				</execution>
+			</executions>
 		</plugin>
 	</plugins>
   </build>
