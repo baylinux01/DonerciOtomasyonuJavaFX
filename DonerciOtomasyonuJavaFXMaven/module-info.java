@@ -1,4 +1,4 @@
-module AidatTakipJavaFX {
+module DonerciOtomasyonuJavaFXMaven {
 	requires javafx.controls;
 	requires javafx.graphics;
 	requires java.sql;
