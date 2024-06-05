@@ -28,6 +28,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 
 
@@ -1002,6 +1003,9 @@ public class Main extends Application {
 			
 			Scene scene = new Scene(root,1200,800);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			Image image=new Image("file:./donerciLogo.png");
+			primaryStage.getIcons().add(image);
+			primaryStage.setTitle("Dönerci Otomasyonu");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
