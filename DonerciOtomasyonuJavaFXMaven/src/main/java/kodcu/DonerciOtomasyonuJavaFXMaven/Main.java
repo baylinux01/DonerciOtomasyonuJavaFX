@@ -1001,7 +1001,7 @@ public class Main extends Application {
 			button6.setOnAction(eh6);
 			root.getChildren().add(button6);
 			
-			Scene scene = new Scene(root,1200,800);
+			Scene scene = new Scene(root,1350,700);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			Image image=new Image("file:./donerciLogo.png");
 			primaryStage.getIcons().add(image);
