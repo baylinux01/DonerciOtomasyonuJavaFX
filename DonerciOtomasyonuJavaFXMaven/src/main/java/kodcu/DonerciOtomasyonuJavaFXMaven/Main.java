@@ -30,12 +30,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
 			Dao dao=new Dao();
 			dao.createDatabase();
 			
@@ -51,6 +53,12 @@ public class Main extends Application {
 			List<Product> orderProducts=new ArrayList<Product>();
 			
 			Group root = new Group();
+			
+			Pane pane=new Pane();
+			pane.setPrefSize(315, 650);
+			pane.setLayoutX(600);
+			pane.setLayoutY(20);
+			root.getChildren().add(pane);
 			
 			Label label=new Label("Eklenecek Ürün Adı:");
 			label.setPrefSize(170, 20);
@@ -79,19 +87,19 @@ public class Main extends Application {
 			root.getChildren().add(textfield1);
 			
 			Label label2=new Label("Toplam:");
-			label2.setPrefSize(170, 20);
-			label2.setLayoutX(570);
-			label2.setLayoutY(362);
+			label2.setPrefSize(100, 20);
+			label2.setLayoutX(40);
+			label2.setLayoutY(340);
 			label2.setAlignment(Pos.BASELINE_RIGHT);
-			root.getChildren().add(label2);
+			pane.getChildren().add(label2);
 			
 			TextField textfield2=new TextField();
 			textfield2.setPrefSize(170, 20);
-			textfield2.setLayoutX(745);
-			textfield2.setLayoutY(355);
+			textfield2.setLayoutX(145);
+			textfield2.setLayoutY(335);
 			textfield2.setEditable(false);
 			textfield2.setAlignment(Pos.BASELINE_RIGHT);
-			root.getChildren().add(textfield2);
+			pane.getChildren().add(textfield2);
 			
 
 			
@@ -118,44 +126,44 @@ public class Main extends Application {
 //			root.getChildren().add(button7);
 			
 			Label label4=new Label("Müşteri Adı Soyadı:");
-			label4.setPrefSize(180, 20);
-			label4.setLayoutX(560);
-			label4.setLayoutY(467);
+			label4.setPrefSize(140, 20);
+			label4.setLayoutX(0);
+			label4.setLayoutY(445);
 			label4.setAlignment(Pos.BASELINE_RIGHT);
-			root.getChildren().add(label4);
+			pane.getChildren().add(label4);
 			
 			TextField textfield4=new TextField();
 			textfield4.setPrefSize(180, 20);
-			textfield4.setLayoutX(745);
-			textfield4.setLayoutY(460);
-			root.getChildren().add(textfield4);
+			textfield4.setLayoutX(145);
+			textfield4.setLayoutY(440);
+			pane.getChildren().add(textfield4);
 			
-			Label label5=new Label("Müşteri Telefon Numarası:");
-			label5.setPrefSize(180, 20);
-			label5.setLayoutX(560);
-			label5.setLayoutY(497);
-			label5.setAlignment(Pos.BASELINE_RIGHT);
-			root.getChildren().add(label5);
+			Label label5=new Label("Müşteri Telefon No:");
+			label5.setPrefSize(160, 20);
+			label5.setLayoutX(20);
+			label5.setLayoutY(475);
+			//label5.setAlignment(Pos.BASELINE_RIGHT);
+			pane.getChildren().add(label5);
 			
 			TextField textfield5=new TextField();
 			textfield5.setPrefSize(180, 20);
-			textfield5.setLayoutX(745);
-			textfield5.setLayoutY(490);
-			root.getChildren().add(textfield5);
+			textfield5.setLayoutX(145);
+			textfield5.setLayoutY(470);
+			pane.getChildren().add(textfield5);
 			
 			Label label6=new Label("Müşteri Adres:");
-			label6.setPrefSize(180, 20);
-			label6.setLayoutX(560);
-			label6.setLayoutY(527);
-			label6.setAlignment(Pos.BASELINE_RIGHT);
-			root.getChildren().add(label6);
+			label6.setPrefSize(160, 20);
+			label6.setLayoutX(50);
+			label6.setLayoutY(540);
+			//label6.setAlignment(Pos.BASELINE_RIGHT);
+			pane.getChildren().add(label6);
 			
 			TextArea textarea6=new TextArea();
 			textarea6.setPrefSize(180, 60);
-			textarea6.setLayoutX(745);
-			textarea6.setLayoutY(520);
+			textarea6.setLayoutX(145);
+			textarea6.setLayoutY(502);
 			textarea6.setWrapText(true);
-			root.getChildren().add(textarea6);
+			pane.getChildren().add(textarea6);
 			
 			ListView listview=new ListView();
 			listview.setPrefSize(170, 150);
@@ -230,11 +238,13 @@ public class Main extends Application {
 			listview8.getSelectionModel().select(0);
 			root.getChildren().add(listview8);
 			
+			
+			
 			TableView<Product> tableview=new TableView<Product>();
 			tableview.setPrefSize(315, 315);
-			tableview.setLayoutX(600);
-			tableview.setLayoutY(20);
-			root.getChildren().add(tableview);
+			tableview.setLayoutX(0);
+			tableview.setLayoutY(0);
+			pane.getChildren().add(tableview);
 			
 			TableColumn<Product, String> col1=new TableColumn<Product, String>("Ürün Adı");
 			TableColumn<Product, String> col2=new TableColumn<Product, String>("Özellik");
@@ -776,10 +786,10 @@ public class Main extends Application {
 			
 			Button button3=new Button("Ürünü Siparişten Sil");
 			button3.setPrefSize(170, 20);
-			button3.setLayoutX(745);
-			button3.setLayoutY(385);
+			button3.setLayoutX(145);
+			button3.setLayoutY(370);
 			button3.setOnAction(eh3);
-			root.getChildren().add(button3);
+			pane.getChildren().add(button3);
 			
 			EventHandler eh4=new EventHandler()
 			{
@@ -814,10 +824,10 @@ public class Main extends Application {
 			
 			Button button4=new Button("Siparişi Sıfırla");
 			button4.setPrefSize(170, 20);
-			button4.setLayoutX(745);
-			button4.setLayoutY(415);
+			button4.setLayoutX(145);
+			button4.setLayoutY(400);
 			button4.setOnAction(eh4);
-			root.getChildren().add(button4);
+			pane.getChildren().add(button4);
 			
 			EventHandler eh7=new EventHandler()
 			{
@@ -831,6 +841,12 @@ public class Main extends Application {
 					ButtonType result=alert.showAndWait().orElse(null);
 					if(result.equals(ButtonType.OK))
 					{
+						PrinterJob job =PrinterJob.createPrinterJob();
+						if(job!=null)
+						{
+							boolean printed=job.printPage(pane);
+							if(printed) job.endJob();
+						}
 						
 					}
 				
@@ -840,10 +856,10 @@ public class Main extends Application {
 			
 			Button button7=new Button("Siparişi Yazdır");
 			button7.setPrefSize(170, 20);
-			button7.setLayoutX(745);
-			button7.setLayoutY(600);
+			button7.setLayoutX(145);
+			button7.setLayoutY(570);
 			button7.setOnAction(eh7);
-			root.getChildren().add(button7);
+			pane.getChildren().add(button7);
 			
 			EventHandler eh5=new EventHandler()
 			{
