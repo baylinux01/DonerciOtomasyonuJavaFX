@@ -133,7 +133,7 @@ public class Main extends Application {
 			pane.getChildren().add(label4);
 			
 			TextField textfield4=new TextField();
-			textfield4.setPrefSize(180, 20);
+			textfield4.setPrefSize(170, 20);
 			textfield4.setLayoutX(145);
 			textfield4.setLayoutY(440);
 			pane.getChildren().add(textfield4);
@@ -146,7 +146,7 @@ public class Main extends Application {
 			pane.getChildren().add(label5);
 			
 			TextField textfield5=new TextField();
-			textfield5.setPrefSize(180, 20);
+			textfield5.setPrefSize(170, 20);
 			textfield5.setLayoutX(145);
 			textfield5.setLayoutY(470);
 			pane.getChildren().add(textfield5);
@@ -159,7 +159,7 @@ public class Main extends Application {
 			pane.getChildren().add(label6);
 			
 			TextArea textarea6=new TextArea();
-			textarea6.setPrefSize(180, 60);
+			textarea6.setPrefSize(170, 60);
 			textarea6.setLayoutX(145);
 			textarea6.setLayoutY(502);
 			textarea6.setWrapText(true);
