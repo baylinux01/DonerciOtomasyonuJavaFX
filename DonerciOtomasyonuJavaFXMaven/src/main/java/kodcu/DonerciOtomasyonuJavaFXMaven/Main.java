@@ -1019,8 +1019,10 @@ public class Main extends Application {
 			
 			Scene scene = new Scene(root,1350,700);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Image image=new Image("file:./donerciLogo.png");
-			primaryStage.getIcons().add(image);
+			//Image image=new Image("file:./donerciLogo.png");
+			//primaryStage.getIcons().add(image);
+			primaryStage.getIcons().add(new Image(Main.class.
+					getResourceAsStream("donerciLogo.png")));
 			primaryStage.setTitle("Dönerci Otomasyonu");
 			primaryStage.setScene(scene);
 			primaryStage.show();

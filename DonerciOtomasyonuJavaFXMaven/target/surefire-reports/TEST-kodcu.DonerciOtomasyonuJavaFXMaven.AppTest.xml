@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="kodcu.DonerciOtomasyonuJavaFXMaven.AppTest" time="0.082" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="kodcu.DonerciOtomasyonuJavaFXMaven.AppTest" time="0.089" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-amazon-corretto/lib"/>
-    <property name="sun.java.command" value="/home/kodcu/Documents/eclipse-workspace/DonerciOtomasyonuJavaFXMaven/target/surefire/surefirebooter-20240606185649088_3.jar /home/kodcu/Documents/eclipse-workspace/DonerciOtomasyonuJavaFXMaven/target/surefire 2024-06-06T18-56-48_860-jvmRun1 surefire-20240606185649088_1tmp surefire_0-20240606185649088_2tmp"/>
+    <property name="sun.java.command" value="/home/kodcu/Documents/eclipse-workspace/DonerciOtomasyonuJavaFXMaven/target/surefire/surefirebooter-20240610114649413_3.jar /home/kodcu/Documents/eclipse-workspace/DonerciOtomasyonuJavaFXMaven/target/surefire 2024-06-10T11-46-49_148-jvmRun1 surefire-20240610114649413_1tmp surefire_0-20240610114649413_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/kodcu/Documents/eclipse-workspace/DonerciOtomasyonuJavaFXMaven/target/test-classes:/home/kodcu/Documents/eclipse-workspace/DonerciOtomasyonuJavaFXMaven/target/classes:/home/kodcu/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-controls/23-ea+20/javafx-controls-23-ea+20.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-controls/23-ea+20/javafx-controls-23-ea+20-linux.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-graphics/23-ea+20/javafx-graphics-23-ea+20.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-graphics/23-ea+20/javafx-graphics-23-ea+20-linux.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-base/23-ea+20/javafx-base-23-ea+20.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-base/23-ea+20/javafx-base-23-ea+20-linux.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-fxml/23-ea+20/javafx-fxml-23-ea+20.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-fxml/23-ea+20/javafx-fxml-23-ea+20-linux.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-swing/23-ea+20/javafx-swing-23-ea+20.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-swing/23-ea+20/javafx-swing-23-ea+20-linux.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-web/23-ea+20/javafx-web-23-ea+20.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-web/23-ea+20/javafx-web-23-ea+20-linux.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-media/23-ea+20/javafx-media-23-ea+20.jar:/home/kodcu/.m2/repository/org/openjfx/javafx-media/23-ea+20/javafx-media-23-ea+20-linux.jar:/home/kodcu/.m2/repository/org/xerial/sqlite-jdbc/3.46.0.0/sqlite-jdbc-3.46.0.0.jar:/home/kodcu/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar:/home/kodcu/.m2/repository/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar:/home/kodcu/.m2/repository/org/mariadb/jdbc/mariadb-java-client/3.4.0/mariadb-java-client-3.4.0.jar:/home/kodcu/.m2/repository/org/slf4j/slf4j-api/2.1.0-alpha1/slf4j-api-2.1.0-alpha1.jar:/home/kodcu/.m2/repository/com/github/waffle/waffle-jna/3.4.0/waffle-jna-3.4.0.jar:/home/kodcu/.m2/repository/net/java/dev/jna/jna/5.14.0/jna-5.14.0.jar:/home/kodcu/.m2/repository/net/java/dev/jna/jna-platform/5.14.0/jna-platform-5.14.0.jar:/home/kodcu/.m2/repository/org/slf4j/jcl-over-slf4j/2.0.13/jcl-over-slf4j-2.0.13.jar:/home/kodcu/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar:/home/kodcu/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar:/home/kodcu/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/kodcu/Documents/eclipse-workspace/DonerciOtomasyonuJavaFXMaven/target/surefire/surefirebooter-20240606185649088_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/kodcu/Documents/eclipse-workspace/DonerciOtomasyonuJavaFXMaven/target/surefire/surefirebooter-20240610114649413_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.3+9-LTS"/>
     <property name="user.name" value="kodcu"/>
@@ -55,5 +55,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testApp" classname="kodcu.DonerciOtomasyonuJavaFXMaven.AppTest" time="0.015"/>
+  <testcase name="testApp" classname="kodcu.DonerciOtomasyonuJavaFXMaven.AppTest" time="0.011"/>
 </testsuite>
