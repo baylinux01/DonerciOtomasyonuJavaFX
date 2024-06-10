@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Dönerci Otomasyonu"
-#define MyAppVersion "1.5"
+#define MyAppVersion "2"
 #define MyAppPublisher "baylinux01"
 #define MyAppURL "https://www.github.com/baylinux01"
 #define MyAppExeName "DonerciOtomasyonuJavaFXMaven-0.0.1-SNAPSHOT-x86_64.exe"
@@ -13,7 +13,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{968FA97D-BAD9-40FE-B80F-C1767DC51DAC}
+AppId={{FC3A51D5-DDE2-4521-A711-82F958A9147C}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -28,7 +28,7 @@ LicenseFile=C:\Users\drgoz\OneDrive\Masaüstü\donerciOtomasyonu\LICENSE.txt
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=commandline
-OutputDir=C:\Users\drgoz\OneDrive\Masaüstü\donerciOtomasyonu
+OutputDir=C:\Users\drgoz\OneDrive\Masaüstü
 OutputBaseFilename=donerciOtomasyonuSetup
 Compression=lzma
 SolidCompression=yes
@@ -54,7 +54,7 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; Value
 Root: HKA; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".myp"; ValueData: ""
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename:"{app}\donerciLogo.ico";
+Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}";IconFilename:"{app}\donerciLogo.ico";
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon;IconFilename:"{app}\donerciLogo.ico";
 
 [Run]
