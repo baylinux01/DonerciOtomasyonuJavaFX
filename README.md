@@ -13,5 +13,7 @@ database'i oluşturamayabiliyor. Bu durumda yapılan işlemlere otomatikmen olum
 cevap verebiliyor. Bu durumdan sakınmak için jar dosyasını mutlaka masaüstünde çevresi bomboş bir yere koyun o şekilde çalıştırın.
 Windows işletim sistemli bilgisayarlar için ikinci bir seçenek olarak exe uzantılı installer da eklenmiştir.installer'a tıklayıp next'leyerek program windows bilgisayara yüklenebilir.
 Ayrıca bilgisayarınızda java(jre) ve sqlite'ın ikisi birden yüklü değil ise program düzgün çalışmayacaktır.
+Program aslen linux bilgisayarlar için tasarlanmış olduğundan
+windows bilgisayarlarda yazılarda kayma gibi ufak uyumsuzluklar olabilir.
 Programın tek eksiği print özelliğinin olmamasıdır. Print özelliğinin olmamasının nedeni
 programı yazdığım sırada elimde yazıcı olmadığı için deneme olanağım olmamasıdır.
