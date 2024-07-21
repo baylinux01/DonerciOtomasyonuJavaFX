@@ -162,7 +162,7 @@ public class Main extends Application {
 			textarea6.setPrefSize(170, 60);
 			textarea6.setLayoutX(145);
 			textarea6.setLayoutY(502);
-			textarea6.setWrapText(true);
+			textarea6.setWrapText(false);
 			pane.getChildren().add(textarea6);
 			
 			ListView listview=new ListView();
