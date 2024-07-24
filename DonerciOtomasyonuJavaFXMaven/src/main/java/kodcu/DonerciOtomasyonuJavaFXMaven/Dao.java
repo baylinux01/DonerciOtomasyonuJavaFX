@@ -108,9 +108,9 @@ public class Dao {
 	{
 		String query1="Create table ProductNameAndPriceTable" +
                 "(" +
-                "ProductName nvarchar(45) not null," +
+                "ProductName text not null," +
 
-                "ProductPrice nvarchar(45) not null," +
+                "ProductPrice text not null," +
                 "primary key(ProductName)"+
 
                 ")";
@@ -168,13 +168,13 @@ public class Dao {
 		
 		String query1="Create table ProductTable" +
                 "(" +
-				"ProductId Int primary key,"+
-                "ProductName nvarchar(45) not null,"+
-                 "ProductNumber Int not null," +
-                "ProductPrice Double not null," +
-                 "ProductProperty nvarchar(200),"+
-                 "ProductTotal Double not null,"+
-                "ProductDate nvarchar(45) not null"+")";
+				"ProductId int primary key,"+
+                "ProductName text not null,"+
+                 "ProductNumber int not null," +
+                "ProductPrice real not null," +
+                 "ProductProperty text,"+
+                 "ProductTotal real not null,"+
+                "ProductDate text not null"+")";
 		
 		
 		
