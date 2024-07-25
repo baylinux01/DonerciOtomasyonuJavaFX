@@ -168,12 +168,12 @@ public class Dao {
 		
 		String query1="Create table ProductTable" +
                 "(" +
-				"ProductId int primary key,"+
+				"ProductId integer primary key,"+
                 "ProductName text not null,"+
-                 "ProductNumber int not null," +
-                "ProductPrice real not null," +
+                 "ProductNumber integer not null," +
+                "ProductPrice double precision not null," +
                  "ProductProperty text,"+
-                 "ProductTotal real not null,"+
+                 "ProductTotal double precision not null,"+
                 "ProductDate text not null"+")";
 		
 		
