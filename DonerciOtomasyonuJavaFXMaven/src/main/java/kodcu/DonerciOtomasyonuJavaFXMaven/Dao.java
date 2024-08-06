@@ -20,13 +20,13 @@ public class Dao {
 	static String MySqlEmptyUrl="jdbc:mysql://localhost:3306/";
 	static String MySqlUrl="jdbc:mysql://localhost:3306/DonerciOtomasyonu";
 	static String MySqlUname="root";
-	static String MySqlPass= "Savassanati01";
+	static String MySqlPass= "root";
 	
 	static String MariaDBClassName="org.mariadb.jdbc.Driver";
 	static String MariaDBEmptyUrl="jdbc:mariadb://localhost:3306/";
 	static String MariaDBUrl="jdbc:mariadb://localhost:3306/DonerciOtomasyonu";
 	static String MariaDBUname="root";
-	static String MariaDBPass= "Savassanati01";
+	static String MariaDBPass= "root";
 	
 	static String SqliteDBClassName="org.sqlite.JDBC";
 	static String SqliteDBEmptyUrl="jdbc:sqlite";
