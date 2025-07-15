@@ -21,41 +21,113 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
+   <dependency>
     <groupId>org.openjfx</groupId>
     <artifactId>javafx-controls</artifactId>
     <version>23-ea+22</version>
+    <classifier>linux</classifier>
 	</dependency>
+	
+	<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-controls</artifactId>
+    <version>23-ea+22</version>
+    <classifier>win</classifier>
+	</dependency>
+	
+	
+	
 	<dependency>
     <groupId>org.openjfx</groupId>
     <artifactId>javafx-graphics</artifactId>
     <version>23-ea+22</version>
-</dependency>
-<dependency>
+    <classifier>linux</classifier>
+	</dependency>
+	
+	<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-graphics</artifactId>
+    <version>23-ea+22</version>
+    <classifier>win</classifier>
+	</dependency>
+
+	<dependency>
     <groupId>org.openjfx</groupId>
     <artifactId>javafx-base</artifactId>
     <version>23-ea+22</version>
-</dependency>
-<dependency>
+    <classifier>linux</classifier>
+	</dependency>
+
+	<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-base</artifactId>
+    <version>23-ea+22</version>
+    <classifier>win</classifier>
+	</dependency>
+
+
+
+	<dependency>
     <groupId>org.openjfx</groupId>
     <artifactId>javafx-fxml</artifactId>
     <version>23-ea+22</version>
-</dependency>
-<dependency>
+    <classifier>linux</classifier>
+	</dependency>
+	
+	<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-fxml</artifactId>
+    <version>23-ea+22</version>
+    <classifier>win</classifier>
+	</dependency>
+
+
+	<dependency>
     <groupId>org.openjfx</groupId>
     <artifactId>javafx-swing</artifactId>
     <version>23-ea+22</version>
-</dependency>
-<dependency>
+    <classifier>linux</classifier>
+	</dependency>
+
+	<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-swing</artifactId>
+    <version>23-ea+22</version>
+    <classifier>win</classifier>
+	</dependency>
+
+
+
+	<dependency>
     <groupId>org.openjfx</groupId>
     <artifactId>javafx-web</artifactId>
     <version>23-ea+22</version>
-</dependency>
-<dependency>
+    <classifier>linux</classifier>
+	</dependency>
+	
+	<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-web</artifactId>
+    <version>23-ea+22</version>
+    <classifier>win</classifier>
+	</dependency>
+
+
+
+	<dependency>
     <groupId>org.openjfx</groupId>
     <artifactId>javafx-media</artifactId>
     <version>23-ea+22</version>
-</dependency>
+    <classifier>linux</classifier>
+	</dependency>
+
+	<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-media</artifactId>
+    <version>23-ea+22</version>
+    <classifier>win</classifier>
+	</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
 <dependency>
     <groupId>org.xerial</groupId>
